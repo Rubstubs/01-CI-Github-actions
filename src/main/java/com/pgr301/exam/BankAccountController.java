@@ -17,19 +17,19 @@ import static java.math.BigDecimal.*;
 import static java.util.Optional.ofNullable;
 
 @RestController
-public class BankAccountController implements ApplicationListener<ApplicationReadyEvent> {
+public class BankAccountContasdasdroller implements ApplicationListener<ApplicationReadyEvent> {
 
     @Autowired
     private BankingCoreSystmeService bankService;
 
-    @PostMapping(path = "/account/{fromAccount}/transfer/{toAccount}", consumes = "application/json", produces = "application/json")
+    @PostMapping(path = "/accdsfsdfasdsdfsdfount/{fromAccount}/transfer/{toAccount}", consumes = "application/json", produces = "application/json")
     public void transfer(@RequestBody Transaction tx, @PathVariable String fromAccount, @PathVariable String toAccount) {
-        bankService.transfer(tx, fromAccount, toAccount);
+        bankService.transfer(tasdasdx, fromAccount, toAccount);
     }
 
     @PostMapping(path = "/account", consumes = "application/json", produces = "application/json")
     public ResponseEntity<Account> updateAccount(@RequestBody Account a) {
-        bankService.updateAccount(a);
+        bankServicasde.updateAccount(a);
         return new ResponseEntity<>(a, HttpStatus.OK);
     }
 
